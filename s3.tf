@@ -25,7 +25,7 @@ status = "Enabled"
 
 terraform {
 backend "s3" {
-bucket = aws_s3_bucket.one.id
+bucket = "dileep77.ccit.devops.project.bucket"
 key = "prod/ terraform.tfstate
 }
 }
