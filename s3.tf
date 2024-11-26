@@ -1,5 +1,5 @@
 resource "aws_s3_bucket" "one" {
-  bucket = "dileep.ccit.devops.project.bucket"
+  bucket = "dileep77.ccit.devops.project.bucket"
 }
 
 resource "aws_s3_bucket_ownership_controls" "two" {
