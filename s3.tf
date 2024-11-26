@@ -30,5 +30,3 @@ bucket = "dileep77.ccit.devops.project.bucket"
 key = "prod/terraform.tfstate"
 }
 }
-
-
