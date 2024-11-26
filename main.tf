@@ -1,7 +1,7 @@
 resource "aws_launch_configuration" "web_server_as" {
-    image_id           = "ami-0195204d5dce06d99"
+    image_id           = "ami-0327f51db613d7bd2"
     instance_type = "t2.micro"
-    key_name = "New"
+    key_name = "k8s"
     security_groups = [aws_security_group.web_server.id]
 }
    
@@ -10,7 +10,7 @@ resource "aws_launch_configuration" "web_server_as" {
   resource "aws_elb" "web_server_lb"{
      name = "web-server-lb"
      security_groups = [aws_security_group.web_server.id]
-     subnets = ["subnet-06300be4794aeb670", "subnet-08e6f17e4eceb84a7"]
+     subnets = ["subnet-055fcb0fea30f6bcf", "subnet-07dd80b215222c0a7"]
      listener {
       instance_port     = 8000
       instance_protocol = "http"
@@ -29,7 +29,7 @@ resource "aws_autoscaling_group" "web_server_asg" {
     desired_capacity     = 2
     health_check_type    = "EC2"
     load_balancers       = [aws_elb.web_server_lb.name]
-    availability_zones    = ["us-east-1f", "us-east-1c"] 
+    availability_zones    = ["ap-south-1c", "ap-south-1a"] 
     
   }
 
