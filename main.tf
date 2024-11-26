@@ -1,5 +1,5 @@
 resource "aws_launch_template" "web_server_as" {
-    name = "myproject"
+
     image_id           = "ami-0327f51db613d7bd2"
     instance_type = "t2.micro"
     key_name = "k8s"
