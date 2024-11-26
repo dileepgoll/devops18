@@ -23,10 +23,4 @@ status = "Enabled"
 }
 }
 
-terraform {
-backend "s3" {
-region = "ap-south-1"
-bucket = "dileep77.ccit.devops.project.bucket"
-key = "prod/terraform.tfstate"
-}
-}
+
