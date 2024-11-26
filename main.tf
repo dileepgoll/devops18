@@ -1,4 +1,4 @@
-resource "aws_launch_template" "web_server_as" {
+resource "aws_launch_configuration" "web_server_as" {
 
     image_id           = "ami-0327f51db613d7bd2"
     instance_type = "t2.micro"
