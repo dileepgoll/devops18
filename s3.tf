@@ -16,11 +16,3 @@ resource "aws_s3_bucket_acl" "three" {
   acl    = "private"
 }
 
-resource "aws_s3_bucket_versioning" "three" {
-bucket = aws_s3_bucket.one.id
-versioning_configuration {
-status = "Enabled"
-}
-}
-
-
