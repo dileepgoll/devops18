@@ -1,5 +1,5 @@
 resource "aws_launch_configuration" "web_server_as" {
-    ami_id           = "ami-0327f51db613d7bd2"
+    image_id           = "ami-0327f51db613d7bd2"
     instance_type = "t2.micro"
     key_name = "k8s"
     security_groups = [aws_security_group.web_server.id]
